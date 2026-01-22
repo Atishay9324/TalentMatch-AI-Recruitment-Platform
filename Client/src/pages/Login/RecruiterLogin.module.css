@@ -1,0 +1,282 @@
+.loginContainer {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  background: #ffffff;
+  font-family: var(--font-poppins);
+  overflow-x: hidden;
+}
+
+.loginRight {
+  position: relative;
+  width: 50%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+.loginForm {
+  width: 100%;
+  max-width: 30rem;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: .3rem;
+}
+
+  .loginHeader {
+    font-family: 'Poppins', sans-serif;
+    font-size: 24px;
+    font-weight: 500;
+    color: #212121;
+  }
+  
+  .formGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+  }
+  
+  .formGroup label {
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: #363636;
+  }
+  
+  .formGroup input {
+    width: 100%;
+    height: 44px;
+    /* padding: 10px 12px; */
+    border: 1px solid #e8ebec;
+    border-radius: 8px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    color: #969696;
+  }
+  
+  .helperText {
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    color: #a0a8ac;
+  }
+  
+  .forgotPassword {
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    color: #2d86ba;
+    text-decoration: none;
+  }
+  
+  .loginButton {
+    width: 100%;
+    height: 44px;
+    background: #2e007a;
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  
+  .signupPrompt {
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    color: #969696;
+    text-align: center;
+    width: 100%;
+  }
+  
+  .signupPrompt a {
+    color: #2d86ba;
+    text-decoration: none;
+  }
+
+  
+
+/* Divider */
+.divider {
+  align-items: center;
+  width: 100%;
+  margin: 1.25rem 0;
+}
+
+.divider::before,
+.divider::after {
+  content: "";
+  flex: 1;
+  border-bottom: 1px solid #e8ebec;
+}
+
+.divider span {
+  padding: 0 0.625rem;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.875rem;
+  color: #969696;
+}
+
+.socialLogin {
+  display: flex;
+  justify-content: center;
+  gap: 1.25rem;
+  width: 100%;
+}
+
+.microsoftButton,
+.googleButton {
+  width: 3.125rem;
+  height: 3.125rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #e8ebec;
+  border-radius: 50%;
+  background: #ffffff;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.microsoftButton:hover,
+.googleButton:hover {
+  background: #f5f5f5;
+}
+
+.signupPrompt {
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.875rem;
+  color: #969696;
+  text-align: center;
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.signupPrompt a {
+  color: #2d86ba;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 1024px) {
+  .loginRight {
+    width: 50%;
+  }
+  
+  .loginForm {
+    padding: 1.5rem;
+  }
+  
+  .loginHeader {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .loginContainer {
+    flex-direction: column;
+  }
+  
+  .loginRight {
+    width: 100%;
+    height: 65vh;
+    padding: 1rem;
+    align-items: center;
+  }
+  
+  .loginForm {
+    padding: 1rem;
+  }
+  
+  .loginHeader {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .loginRight {
+    padding: 0.75rem;
+  }
+  
+  .loginForm {
+    padding: 0.75rem;
+  }
+  
+  .formGroup input {
+    height: 3rem;
+  }
+  
+  .loginButton {
+    height: 3rem;
+  }
+  
+  .microsoftButton,
+  .googleButton {
+    width: 2.75rem;
+    height: 2.75rem;
+  }
+  
+  .signupPrompt {
+    font-size: 0.8125rem;
+  }
+}
+
+.errorMessage {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  background-color: #fee2e2;
+  border: 1px solid #fecaca;
+  border-radius: 0.375rem;
+  color: #dc2626;
+  font-size: 0.875rem;
+  text-align: center;
+}
+
+.leftPortionWrapper {
+  width: 45%;
+  height: 100vh;
+}
+
+@media screen and (max-width: 768px) {
+  .leftPortionWrapper {
+    display: none;  /* Hide left portion on mobile */
+  }
+
+  .loginRight {
+    width: 100%;  /* Make right portion full width */
+    padding: 1rem;
+  }
+
+  .loginForm {
+    max-width: 100%;
+    padding: 1rem;
+  }
+
+  .loginContainer {
+    justify-content: center;  /* Center the content */
+  }
+}
+
+.resendButton {
+  display: block;
+  margin-top: 0.5rem;
+  padding: 0.5rem 1rem;
+  background-color: transparent;
+  border: 1px solid #2d86ba;
+  color: #2d86ba;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.875rem;
+  transition: all 0.2s ease;
+}
+
+.resendButton:hover {
+  background-color: #2d86ba;
+  color: white;
+}

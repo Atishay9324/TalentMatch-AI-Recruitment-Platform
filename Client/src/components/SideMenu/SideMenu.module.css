@@ -1,0 +1,130 @@
+.sideMenu {
+  width: 70px;
+  height: 100vh;
+  background: #FFFFFF;
+  transition: width 0.3s;
+  padding: 20px 10px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.expanded {
+  width: 250px;
+}
+
+.menuItem {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  margin: 5px 0;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background-color 0.3s;
+}
+
+.menuItem:hover {
+  background-color: #F7FAFC;
+}
+
+.icon {
+  min-width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.iconText {
+  margin-left: 15px;
+  color: #718096;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+.logo {
+  margin-bottom: 20px;
+}
+
+.MainIcon {
+  font-size: 24px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  background-color: #7C3AED;
+  border-radius: 6px;
+}
+
+.bottomIcons {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Add these styles at the appropriate location in your CSS file */
+
+.hamburger {
+  display: none; /* Hidden by default on desktop */
+}
+
+@media (max-width: 768px) {
+  .sideMenu {
+    width: 100%;
+    height: 60px;
+    padding: 0 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background: #FFFFFF;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .hamburger {
+    display: flex;
+    cursor: pointer;
+    order: 1;
+  }
+
+  .logo {
+    margin: 0;
+    order: 2;
+  }
+
+  .expanded {
+    width: 250px;
+    height: calc(100vh - 60px);
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px 10px;
+    position: fixed;
+    top: 60px;
+    left: 0;
+    background: #FFFFFF;
+  }
+
+  .menuItem:not(.hamburger) {
+    display: none;
+  }
+
+  .expanded .menuItem:not(.hamburger) {
+    display: flex;
+  }
+
+  .bottomIcons {
+    display: none;
+  }
+
+  .expanded .bottomIcons {
+    display: flex;
+    margin-top: auto;
+  }
+}
